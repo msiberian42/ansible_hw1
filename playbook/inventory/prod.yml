@@ -3,11 +3,18 @@
     hosts:
       centos7:
         ansible_connection: docker
+        ansible_remote_tmp: /tmp/.ansible/tmp
   deb:
     hosts:
       ubuntu:
         ansible_connection: docker
+        ansible_remote_tmp: /tmp/.ansible/tmp
   local:
     hosts:
       localhost:
         ansible_connection: local
+  fedora:
+    hosts:
+      fedora-host:
+        ansible_connection: docker
+        ansible_remote_tmp: /tmp/.ansible/tmp
